@@ -1,0 +1,128 @@
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow: hidden;
+}
+
+/* ======================== Background ======================== */
+
+#background {
+    height: 100vh;
+    background: url(./assets/bg.jpg) no-repeat center center fixed;
+    background-size: cover;
+    filter: hue-rotate(90deg) brightness(10%);
+    animation: bg 8s linear 3s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes bg {
+    from{
+        filter: hue-rotate(90deg) brightness(15%);
+    }
+    to{
+        filter: hue-rotate(0) brightness(100%);
+    }
+}
+
+
+/* ======================== Sun ======================== */
+
+#sun {
+    position: absolute;
+    height: 0px;
+    animation: sun 8s linear 3s; 
+    animation-fill-mode: forwards;
+}
+
+@keyframes sun {
+    from{
+        top: 41%;
+        left: 75%;
+        height: 0;
+    }
+    to{
+        top: 2%;
+        left: 40%;
+        height: 150px;
+    }
+}
+
+
+/* ======================== Flower ======================== */
+
+#flower {
+    position: absolute;
+    bottom: 12%;
+    right: 28%;
+    height: 0;
+    animation: flower 8s linear 8s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes flower {
+    from{
+        height: 0;
+    }
+    to{
+        height: 170px;
+    }
+}
+
+/* ======================== Butterfly ======================== */
+
+#butterfly {
+    position: absolute;
+    bottom: 25%;
+    right: -6rem;
+    height: 40px;
+    animation: butterfly-in 5s linear 15s , butterfly-out 3.5s linear 25s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes butterfly-in {
+    from{
+        bottom: 60%;
+        right: -4%;
+    }
+    to{
+        bottom: 30%;
+        right: 35%;
+    }
+}
+@keyframes butterfly-out {
+    from{
+        bottom: 33%;
+        right: 35%;
+    }
+    to{
+        bottom: 40%;
+        right: -4%;
+    }
+}
+
+
+/* ======================== Cat ======================== */
+
+
+#cat {
+    position: absolute;
+    left: -7rem;
+    bottom: 8%;
+    height: 70px;
+    animation: cat 9s linear 20s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes cat {
+    from{
+        left: -10%;
+    }
+    to{
+        left: 100%;
+    }
+}
